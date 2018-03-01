@@ -41,12 +41,10 @@
 ## Interrupt
 > ```
 >
->   +---------------------------------+                                 +---------------------------------+
->
->   ไม่ใช่ Address จริง ๆ คล้าย ๆ Array
->    ^
->    |
->    |          Physical Memory
+>   ไม่ใช่ Address จริง ๆ คล้าย ๆ Array                                                  Internal Register
+>    ^                                                                                      ^
+>    |                                                                                      |
+>    |          Physical Memory                                                     CPU     |
 >        +-------------------------+ --+                            +---------------------------------+
 >   [0]  |                         |   |                            |            +--------------------|
 >        |-------------------------|   |                            |   +----+   |        +-------+   |
@@ -81,7 +79,8 @@
 1. Copy ค่าใส Internal Register
 2. Edit ค่าใน SP เป็น Kernel Stack
 3. Copy ค่าใน Internal Register ลงบน Memory ส่วนที่เป็น Kernel Stack
-4. new
+4. ค่า Address ใน PC จะเปลี่ยนไปทำ Interrupt Handler ที่ 2000 หลังจากนั้น Software ทำต่อ
+์Note : PC, PSW และ SP เป็นส่วนของ Hardware ทำ
 
 ## License
 Webneena license.
