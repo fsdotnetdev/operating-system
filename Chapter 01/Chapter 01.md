@@ -316,7 +316,7 @@ DMA Controller จะทำการแย่ง Bus จนกระทั่ง
 > ```
 
 ## Memory Hierachy Process
-CPU จะตรวจสอบว่ามี Word ใน Cache ถ้าไม่มีก็จะไปถามใน Block ของ Memory 
+เมื่อ CPU มีการเรียกข้อมูลที่อยู่บน Memory จะตรวจสอบว่ามี Word อยู่ใน Cache หรือไม่ ถ้ามีจะเรียกว่า (Hit) ถ้าไม่มีจะเรียกว่า (Miss) ก็จะไปหาใน Block บน Memory โดย Block จะมีขนาดเป็นจำนวนเท่าของ Word หลังจากนั้น Memory จะ Transfer Data Block กลับไปให้ CPU พร้อมทั้งเก็บไว้ใน Cache
 > ```
 >
 >              Word Transfer        Block Transfer
@@ -326,12 +326,6 @@ CPU จะตรวจสอบว่ามี Word ใน Cache ถ้าไม
 >   +-----------+         +-----------+         +-----------------+
 >
 > ```
-
-register
-cache
-main memory
-magnetic disk
-magnetic tape
 
 ## Program Development
 ในการเขียนโปรแกรมจะประกอบไปด้วยไฟล์หลาย ๆ ไฟล์ โดยจะทำการแยก Code ส่วนที่ใช้ซ้ำออกมา เรียกว่า Module ในแต่ละ Module อาจจะมีการเรียกใช้ Function จาก Module อื่น จึงต้องมีการทำ Linker หลังจาก Compile เพื่อเรียกใช้
@@ -402,19 +396,6 @@ magnetic tape
 >                          |     |     |                                |                                 |
 >                          +-----+-----+                                +---------------------------------+
 >                          Mapping Table
->
-> ```
-
-
-> ```
->    
->     +---------------+
->   --|               |--
->     |               |
->   --|      CPU      |--
->     |               |
->   --|               |--
->     +---------------+
 >
 > ```
 
