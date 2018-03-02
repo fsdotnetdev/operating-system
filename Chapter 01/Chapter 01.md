@@ -318,7 +318,7 @@ Burst Mode จะ Block CPU
 > ```
 
 ## System Bus
-เป็นช่องทางการสื่อสาร
+เป็นเส้นทางการสื่อสารเพื่อใช้ในการรับส่งข้อมูล Data Transfer ระหว่าง CPU และอุปกรณ์ Hardware ต่าง ๆ System Bus ที่เราพอจะรู้จัก ก็คือ PCI Bus (Peripheral Component Interconnect) ของ Intel ซึ่งเป็น Bus 64-bit เพื่อรองรับ CPU 64-bit ทำให้สามารถรับส่งข้อมูลได้ทั้ง 32-bit และ 64-bit และสามารถเสียบแล้วทำงานได้เลยแบบ Plug and Play
 
 ## Credit
 Operatin System (6th Edition)
