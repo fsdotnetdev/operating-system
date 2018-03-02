@@ -90,5 +90,14 @@
 4. ค่า Address ใน PC จะเปลี่ยนไปทำ Interrupt Handler ที่ 2000 หลังจากนั้น Software ทำต่อ
 Note : PC, PSW และ SP เป็นส่วนของ Hardware ทำ
 
+## Credit
+Operatin System (6th Edition)
+https://os-dekcis.blogspot.com/2009/07/os-1-2.html
+http://bc.feu.ac.th/pichate/os_c8/chapter8.htm
+http://www.thaiall.com/os/os05.htm
+http://www.tamemo.com/post/97/%E0%B9%81%E0%B8%9B%E0%B8%A5%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B-computer-architecture-%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-1-2-evolution-of-computer/
+http://www.tamemo.com/post/115/os-memory-paging/
+https://nakizacom.weebly.com/3619363236103610361135993636361036333605363635853634361935883629361736143636362336483605362936193660-operating-system.html
+
 ## License
 Webneena license.
