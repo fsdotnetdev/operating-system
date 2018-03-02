@@ -3,15 +3,20 @@
 ## Topic
 * OS Architecture
 * CPU
+* 32-bit vs 64-bit
 * CPU Instruction Process
 * Instruction Format
 * Example Program Execute
 * Register
 * I/O Controller
 * I/O Controller Status
-
+* CPU Communication with Register
+* I/O Communication
+* Address Translation
+* MMU (Memory Management Unit)
 
 ## OS Architecture
+การทำงานของคอมพิวเตอร์จะมี System Bus เป็นช่องทาง Data Transfer ระหว่าง Hardware ต่าง ๆ ไม่ว่าจะเป็น CPU, Memory, I/O Module
 > ```
 >
 >                   CPU                                                             Main Memory
@@ -64,8 +69,10 @@
 * MBR = Memory Buffer Register
 
 * I/O AR = Input/Output Address Register
+เป็น Register ที่ทำหน้าที่ในการเก็บ Address ของอุปกรณ์ I/O
 
 * I/O BR = Input/Output Buffer Register
+เป็น Register ที่ทำหน้าที่ในการ Transfer Data
 
 ## 32-bit vs 64-bit
 ในปัจจุบันคอมพิวเตอร์จะมีสถาปัตยกรรมสองแบบ คือ 32 บิต หรือ 64 บิต ซึ่งไว้เก็บ Address
