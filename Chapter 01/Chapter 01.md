@@ -59,20 +59,23 @@
 
 ## CPU (Central Processing Unit)
 ทำหน้าที่ควบคุมการทำงานของคอมพิวเตอร์ และทำหน้าที่ประมวลผลข้อมูล Data Processing ภายใน CPU หลัก ๆ จะประกอบไปด้วย
-* PC  = Program Counter
+* PC (Program Counter)
+ทำหน้าที่ในการระบุ Address ของ Instruction ถัดไป ที่อยู่บน Memory
 
-* IR  = Instruction Register
+* IR (Instruction Register)
+ทำหน้าที่ในการเก็บ Instruction ปัจจุบันที่กำลังถูก Executed หรือ Decode อยู่
 
 * MAR = Memory Address Register
-เป็น Register ที่ทำหน้าที่ในการเก็บ Address ของ Data ที่ถูก Fetch จาก Memory มาทำงานที่ CPU เพื่อเวลาที่ทำงานเสร็จจะเก็บค่าลงบน Memory ได้ถูก
+เป็น Register ที่ทำหน้าที่ในการเก็บ Address ของข้อมูลที่ถูก Fetch จาก Memory มาทำงานที่ CPU เพื่อเวลาที่ทำงานเสร็จจะเก็บค่าลงบน Memory ได้ถูก
 
 * MBR = Memory Buffer Register
+เป็น Register ที่ทำหน้าที่ในการเก็บข้อมูลที่ถูก Fetch จาก Memory เข้ามาใน CPU หรือเก็บข้อมูลเพื่อเตรียมเขียนลงบน Memory
 
 * I/O AR = Input/Output Address Register
 เป็น Register ที่ทำหน้าที่ในการเก็บ Address ของอุปกรณ์ I/O
 
 * I/O BR = Input/Output Buffer Register
-เป็น Register ที่ทำหน้าที่ในการ Transfer Data
+เป็น Register ที่ทำหน้าที่ในการเก็บข้อมูลที่ถูก Fetch จากอุปกรณ์ I/O เข้ามาใน CPU หรือเก็บข้อมูลเพื่อเตรียมเขียนลงบนอุปกรณ์ I/O
 
 ## 32-bit vs 64-bit
 ในปัจจุบันคอมพิวเตอร์จะมีสถาปัตยกรรมสองแบบ คือ 32 บิต หรือ 64 บิต ซึ่งไว้เก็บ Address
