@@ -22,5 +22,20 @@
 
 ในการเขียนโปรแกรม การจะเข้าถึง Instruction จะไม่สามารถเข้าถึงได้โดยตรงใน User Mode เพราะ OS จะไม่ยอมแต่จะให้ User Program เรียกใช้ Instruction ผ่าน Library ของ System Call ในภาษา Assembly
 
+## Process System Call
+> ```
+>
+>   0              3 4                                       15
+>   +---------------+-----------------------------------------+
+>   |     Opcode    |              Handler Address            |
+>   +---------------+-----------------------------------------+
+>   |     Opcode    |              Handler Address            |
+>   +---------------+-----------------------------------------+
+>
+> ```
+
+## Timer
+ใน OS จะมีวิธีการควบคุมโปรแกรมที่ทำงานอยู่ใน CPU โดยใช้ Timer ซึ่งเป็น Hardware ในการส่งสัญญาณ Interrupt การเกิดสัญญาณ Interrupt แต่ละครั้งจะเรียก Clock Tik ตรวจสอบเวลาการทำงานของ Process หากใช้เกินเวลาที่กำหนดจะสลับให้ Process อื่นมาใช้ Resource แทน ซึ่งจะช่วยป้องกันการเกิด Infinite Loop ในการตั้งค่า Timer จะถือเป็น Privilege Instruction
+
 ## Credit
 Operatin System (6th Edition)

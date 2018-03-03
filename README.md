@@ -4,8 +4,6 @@
 * [I/O Controller](http://webneena.blogspot.com/2018/01/io-controller_23.html)
 * [Static Library vs Dynamic Library](http://webneena.blogspot.com/2018/01/static-library-vs-dynamic-link-library.html)
 * [32-bit vs 64-bit](http://www.tamemo.com/post/115/os-memory-paging/)
-* [CPU Scheduling Round Robin]()
-* 
 
 ## Interrupt
 การทำงานของ CPU โดยปกติจะต้องติดต่อกับอุปกรณ์ Hardware ต่าง ๆ เชน Disk, Keyboard, Clock, Printer ซึ่งอาจจะถูกขัดจังหวะการทำงานด้วยอุปกรณ์เหล่านี้ โดย Interrupt จะถูกแบ่งออกเป็น 4 ประเภท
@@ -72,16 +70,16 @@
 >        |-------------------------| --+
 >        |                         |
 >        |-------------------------|
->        |          Code           |
->        |-------------------------|
->        |          Data           |
->        |-------------------------|
->        |          Heap           |
->        |-------------------------|
->        |       User Stack        |
->        |-------------------------|
->        |       ernel Stack       |
->       +--------------------------+
+>        |          Code           |----------------+
+>        |-------------------------|                |
+>        |          Data           |----------+     |
+>        |-------------------------|          |     |
+>        |          Heap           |          |     |                      Excel Program
+>        |-------------------------|          |     |               +-------------------------+
+>        |       User Stack        |          |     +---------------|          Code           |
+>        |-------------------------|          |                     |-------------------------|
+>        |      Kernel Stack       |          +---------------------|          Data           |
+>       +--------------------------+                                +-------------------------+
 >   
 > ```
 1. Copy ค่าใส Internal Register
@@ -92,12 +90,6 @@ Note : PC, PSW และ SP เป็นส่วนของ Hardware ทำ
 
 ## Credit
 Operatin System (6th Edition)
-https://os-dekcis.blogspot.com/2009/07/os-1-2.html
-http://bc.feu.ac.th/pichate/os_c8/chapter8.htm
-http://www.thaiall.com/os/os05.htm
-http://www.tamemo.com/post/97/%E0%B9%81%E0%B8%9B%E0%B8%A5%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B-computer-architecture-%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-1-2-evolution-of-computer/
-http://www.tamemo.com/post/115/os-memory-paging/
-https://nakizacom.weebly.com/3619363236103610361135993636361036333605363635853634361935883629361736143636362336483605362936193660-operating-system.html
 
 ## License
 Webneena license.
