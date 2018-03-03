@@ -316,14 +316,14 @@ DMA Controller จะทำการแย่ง Bus จนกระทั่ง
 > ```
 
 ## Memory Hierachy Process
-เมื่อ CPU มีการเรียกข้อมูลที่อยู่บน Memory จะตรวจสอบว่ามี Word อยู่ใน Cache หรือไม่ ถ้ามีจะเรียกว่า (Hit) ถ้าไม่มีจะเรียกว่า (Miss) ก็จะไปหาใน Block บน Memory โดย Block จะมีขนาดเป็นจำนวนเท่าของ Word หลังจากนั้น Memory จะ Transfer Data Block กลับไปให้ CPU พร้อมทั้งเก็บไว้ใน Cache
+เมื่อ CPU มีการเรียกข้อมูลที่อยู่บน Memory จะตรวจสอบว่ามี Word อยู่ใน Cache หรือไม่ ถ้ามีจะเรียกว่า (Hit) ถ้าไม่มีจะเรียกว่า (Miss) ก็จะไปหาใน Block บน Memory โดย Block จะมีขนาดเป็นจำนวนเท่าของ Word หลังจากนั้น Memory จะ Transfer Data Block กลับไปให้ CPU พร้อมทั้งเก็บไว้ใน Cache ระหว่าง Disk กับ Memory ก็ถือเป็นการทำ Cache อย่างหนึ่งเรียกว่า Virtual Memory
 > ```
 >
->              Word Transfer        Block Transfer
+>              Word Transfer        Block Transfer              Virtual Memory
 >
->   +-----------+         +-----------+         +-----------------+
->   |    CPU    |-------->|   Cache   |-------->|   Main Memory   |
->   +-----------+         +-----------+         +-----------------+
+>   +-----------+         +-----------+         +-----------------+         +----------+
+>   |    CPU    |-------->|   Cache   |-------->|   Main Memory   |-------->|   Disk   |
+>   +-----------+         +-----------+         +-----------------+         +----------+
 >
 > ```
 
